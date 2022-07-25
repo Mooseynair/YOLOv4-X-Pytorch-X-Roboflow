@@ -4,8 +4,6 @@
 
 ---
 
-Aight you fuckers. This is the situation with this code and this process and all the blood sweat and tears that went into figuring this shit out.
-
 ### What are we trying to achieve?
 
 Using a Windows 11 computer, we managed to get YOLOv4 working (using a Pytorch framework) with a local GPU and used Roboflow to assist in collating the data into train, test and validation folders. We used Ananconda to create a seperate environment to manage all our depedencies
@@ -145,7 +143,7 @@ Once downloaded simply extract the contents into the folder where the repo was i
 
 ![Alt text](README-images/img6.png?raw=true)
 
-While in the Yolo_Roboflow folder, run these commands using wsl
+While in the Yolo_Roboflow folder, run these commands using WSL
 
 ```bash
 cp train/_annotations.txt train/train.txt
@@ -174,7 +172,7 @@ python ./pytorch-YOLOv4/train.py -b 2 -s 1 -l 0.001 -g 0 -pretrained ./pytorch-Y
 
 model weights should be saved in a folder called checkpoints
 
-# Step 5 - Inference
+# Step 5 - Inference (WIP)
 
 ```python
 python demo_pytorch2onnx.py <weight_file> <image_path> <batch_size> <n_classes> <IN_IMAGE_H> <IN_IMAGE_W>
